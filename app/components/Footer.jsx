@@ -95,6 +95,7 @@ export default function Footer() {
 
           <Link
             href="/book"
+            scroll={true}
             className="px-5 py-2 rounded-full bg-yellow-400 text-black text-sm font-semibold hover:scale-105 transition shadow-[0_0_12px_rgba(255,200,0,0.6)] inline-block text-center"
           >
             Book a Table

@@ -11,7 +11,7 @@ export default function FloatingWhatsApp() {
     <a
       href={`https://wa.me/${phone}?text=${message}`}
       target="_blank"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed right-6 z-50 group bottom-20 md:bottom-6"
     >
       <div className="relative">
         {/* glow */}
