@@ -93,13 +93,17 @@ export default function Navbar() {
             );
           })}
 
-          {/* CTA */}
           <motion.button
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-2 rounded-full font-semibold text-black bg-yellow-400 shadow-[0_0_15px_rgba(255,200,0,0.6)]"
           >
-            Book Table
+            <Link
+              href="/book"
+              className="px-6 py-2 rounded-full bg-yellow-400 text-black font-semibold inline-block text-center"
+            >
+              Book Table
+            </Link>
           </motion.button>
         </div>
 
@@ -139,9 +143,13 @@ export default function Navbar() {
             );
           })}
 
-          <button className="w-full bg-yellow-400 text-black py-3 rounded-full font-semibold">
+          <Link
+            href="/book"
+            onClick={() => setIsOpen(false)}
+            className="block w-full text-center bg-yellow-400 text-black py-3 rounded-full font-semibold"
+          >
             Book Table
-          </button>
+          </Link>
         </motion.div>
       )}
     </motion.nav>

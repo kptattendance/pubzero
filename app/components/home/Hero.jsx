@@ -73,9 +73,12 @@ export default function Hero() {
           </Link>
 
           {/* 📅 BOOK BUTTON */}
-          <button className="px-7 py-3 rounded-full border border-white/30 text-white backdrop-blur-md hover:bg-white/10 transition hover:scale-105">
+          <Link
+            href="/book"
+            className="px-7 py-3 rounded-full border border-white/30 text-white backdrop-blur-md hover:bg-white/10 transition hover:scale-105"
+          >
             Book a Table
-          </button>
+          </Link>
         </motion.div>
       </div>
 
