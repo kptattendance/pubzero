@@ -41,16 +41,26 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* 🔥 CLICKABLE LOGO */}
-        <Link href="/">
-          <motion.h1
+        <Link href="/" className="flex items-center gap-2">
+          <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl md:text-2xl font-extrabold tracking-wide text-white cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer"
           >
-            <span className="text-yellow-400 drop-shadow-[0_0_8px_rgba(255,200,0,0.8)]">
-              Zero
-            </span>{" "}
-            Degree
-          </motion.h1>
+            {/* LOGO IMAGE */}
+            <img
+              src="/images/logo.png"
+              alt="Zero Degree Logo"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            />
+
+            {/* TEXT */}
+            <h1 className="text-xl md:text-2xl font-extrabold tracking-wide text-white">
+              <span className="text-yellow-400 drop-shadow-[0_0_8px_rgba(255,200,0,0.8)]">
+                Zero
+              </span>{" "}
+              Degree
+            </h1>
+          </motion.div>
         </Link>
 
         {/* DESKTOP MENU */}
