@@ -43,49 +43,45 @@ export default function MenuPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   useEffect(() => {
-  const sectionMap = {
-    soups: "Soups / Salads",
-    starters: "Starters",
-    main: "Main Course",
-    pizza: "Pizza",
-    desserts: "Desserts",
-  };
+    const sectionMap = {
+      soups: "Soups / Salads",
+      starters: "Starters",
+      main: "Main Course",
+      pizza: "Pizza",
+      desserts: "Desserts",
+    };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          setActive(sectionMap[id]);
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: "-40% 0px -50% 0px", // 👈 KEY MAGIC
-      threshold: 0,
-    }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            setActive(sectionMap[id]);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-40% 0px -50% 0px", // 👈 KEY MAGIC
+        threshold: 0,
+      },
+    );
 
-  const sections = Object.keys(sectionMap);
+    const sections = Object.keys(sectionMap);
 
-  sections.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
-  });
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
   return (
     <main className="bg-black text-white min-h-screen">
       {/* HERO */}
       <MenuHero />
-
-      {/* 🔥 SIGNATURE SECTION (better placement) */}
       <SignatureSection />
-      {/* 🔥 STICKY CONTROL BAR */}
       <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
         {/* Tabs */}
         <MenuTabs active={active} setActive={setActive} />

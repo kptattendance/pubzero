@@ -10,7 +10,7 @@ export default function EventsPage() {
     <main className="bg-black text-white min-h-screen">
       <EventsHero />
 
-      <div className="space-y-20 py-16">
+      <div className="space-y-20 py-1">
         <UpcomingEvents />
         <WeeklyEvents />
         <PrivateEvents />
