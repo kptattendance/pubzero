@@ -99,6 +99,109 @@ export default function AboutPage() {
           </div>
         </motion.div>
       </div>
+
+      <section className="mt-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Our <span className="text-yellow-400">Philosophy</span>
+          </h2>
+
+          <p className="text-gray-400 leading-relaxed text-lg">
+            At Zero Degree, we believe nightlife is not just about drinks — it’s
+            about energy, connection, and unforgettable moments. Every detail,
+            from our handcrafted brews to curated music, is designed to create
+            an atmosphere where people come alive.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { number: "50+", label: "Signature Dishes" },
+            { number: "20+", label: "Craft Beers" },
+            { number: "1000+", label: "Happy Guests" },
+            { number: "5★", label: "Customer Experience" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-6 rounded-xl bg-white/5 border border-white/10"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-yellow-400">
+                {item.number}
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-20 px-6 md:px-0">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Ambience",
+              desc: "Modern interiors with vibrant lighting",
+              img: "/images/gallery/1.png",
+            },
+            {
+              title: "Music",
+              desc: "Live DJs & curated playlists",
+              img: "/images/gallery/8.png",
+            },
+            {
+              title: "Food & Drinks",
+              desc: "Fusion cuisine & signature cocktails",
+              img: "/images/gallery/6.png",
+            },
+          ].map((item, i) => (
+            <div key={i} className="relative rounded-xl overflow-hidden group">
+              <img
+                src={item.img}
+                className="h-60 w-full object-cover group-hover:scale-110 transition duration-500"
+              />
+
+              <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-4">
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm text-gray-300">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-20 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">
+          Why Choose <span className="text-yellow-400">Zero Degree</span>
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Premium Experience",
+              desc: "Every visit is designed to feel exclusive and memorable.",
+            },
+            {
+              title: "Vibrant Nightlife",
+              desc: "Music, energy, and atmosphere like no other.",
+            },
+            {
+              title: "Quality & Taste",
+              desc: "Crafted food and drinks with unmatched consistency.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-6 rounded-xl bg-white/5 border border-white/10"
+            >
+              <h3 className="text-lg font-semibold mb-2 text-yellow-400">
+                {item.title}
+              </h3>
+              <p className="text-gray-400 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
