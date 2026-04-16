@@ -34,16 +34,16 @@ export default function Footer() {
 
           <ul className="space-y-2 text-gray-400 text-sm">
             <li>
-              <Link href="#">Terms & Conditions</Link>
+              <Link href="terms">Terms & Conditions</Link>
             </li>
             <li>
-              <Link href="#">Privacy Policy</Link>
+              <Link href="privacy">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="#">Refund Policy</Link>
+              <Link href="refund">Refund Policy</Link>
             </li>
             <li>
-              <Link href="#">Disclaimer</Link>
+              <Link href="disclaimer">Disclaimer</Link>
             </li>
           </ul>
         </div>
